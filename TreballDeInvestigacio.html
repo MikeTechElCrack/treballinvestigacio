@@ -1,0 +1,311 @@
+<html>
+<head>
+
+<title>Preguntes investigables</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="assets/logo.png">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+--gris-fosc:#3f3f3f;
+--gris:#6f6f6f;
+--gris-clar:#bfbfbf;
+--blanc:#eaeaea;
+--negre:#010101;
+--blau:#3b83bd;
+--font:raleway, sans-serif;
+}
+html{
+box-sizing:border-box;
+font-family:var(--font);
+font-size:16px;
+scroll-behavior:smooth;
+margin:0;
+padding:0;
+}
+
+*,*::after,*::before{
+box-sizing:inherit;
+scroll-behavior:smooth;
+margin:0;
+font-family:'Roboto Mono'
+}
+
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.header{
+width:100vw;
+height:300px;
+display:block;
+}
+
+.notch{
+width:100vw;
+height:60px;
+background-color:var(--blau);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-right:2rem;
+position:fixed;
+}
+
+.logo{
+	height:90%;
+}
+
+
+.button{
+background-color:var(--blau);
+border:0;
+margin-left:20px;
+}
+
+.none{
+display:none;
+}
+
+.titol{
+position:absolute;
+width:100vw;
+height:240px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+height:240px;
+background-color:var(--gris-clar);
+top:60px;
+z-index:-1000;
+}
+
+.titol h1{
+	font-size:calc(4vw + 8px);
+}
+
+.titol img{
+width:10vw;
+animation:transparentDos 4s;
+}
+
+@keyframes transparentDos{
+0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}
+
+
+.treballInvestigacio{
+display:block;
+font-family:monospace;
+white-space:nowrap;
+width:23ch;
+
+animation: typing 2s steps(23);
+overflow:hidden;
+}
+
+@keyframes typing{
+	from {width:0}
+}
+nav{
+	position:fixed;
+	background-color:var(--gris);
+	margin-top:-100vh;
+	width:100vw;
+	height:calc(100vh - 60px);
+	transition:all .5s ease;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	top:0;
+}
+
+
+
+#nav div{
+padding:20px;
+}
+
+#nav a{
+text-decoration:none;
+color:var(--blanc);
+}
+
+.isActive{
+position:fixed;
+top:60px;
+margin-top:0;
+animation:transparent 1s;
+}
+
+@keyframes transparent{
+from{opacity:0};
+to{opacity:1};
+}
+
+
+.main{
+	width:100vw;
+}
+
+#quisom, #comHoHemFet{
+display:flex;
+width:100vw;
+height:100px;
+background-color:var(--gris);
+color:var(--blanc);
+justify-content:center;
+align-items:center;
+}
+
+.textQuiSom, .textComHoHemFet{
+	line-height:30px;
+	display:flex;
+	width:100vw;
+	justify-content:center;
+	align-items:flex-start;
+	color:black;
+	background-color:var(--gris-clar);
+	padding-bottom:20px;
+}
+
+.textQuiSom p, .textComHoHemFet p{
+margin-top:30px;
+margin-left:20px;
+margin-right:20px;
+text-align:justify;
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="notch">
+<button class="button">
+<svg class="si" id="tresLineas" width="3rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
+<svg class="none" id="noTresLineas"  width="3rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/></svg>
+</button>
+
+<a href="http://www.esdelibro.es/"><img class="logo" src="assets/logo.png"></a>
+</div>
+
+
+<div class="titol">
+
+<img src="assets/cookie.png">
+
+<h1 class="treballInvestigacio">Preguntes Investigables</h1>
+
+<img src="assets/ordinador2.png">
+</div>
+
+
+</header>
+
+<nav id="nav" class>
+<div class="quiSom">
+<a href="#quiSom">Qui som</a>
+</div>
+
+<div class="comHoHemFet">
+<a href="#comHoHemFet">Com ho hem fet</a>
+</div>
+
+<div class="introduccio">
+<a href="#introduccio">Introducció</a>
+</div>
+
+<div class="metodologia">
+<a href="#metodologia">Metodologia</a>
+</div>
+
+<div class="contextualitzacio">
+<a href="#contextualitzacio">Contextualització</a>
+</div>
+
+<div class="investigacio">
+<a href="#investigacio">Investigació</a>
+</div>
+
+<div class="conclusions">
+<a href="#conclusions">Conclusions</a>
+</div>
+
+<div class="glossari">
+<a href="#glossari">Glossari</a>
+</div>
+
+<div class="bibliografia">
+<a href="#bibliografia">Bibliografia</a>
+</div>
+
+<div class="annexos">
+<a href="#annexos">Annexos</a>
+</div>
+
+</nav>
+
+<main>
+<div id="quisom">
+<h2>Qui som?</h2>
+</div>
+<div class="textQuiSom">
+<p>Som la Nora Huici, la Bruna Pellicer, el Miquel Vidal i l'Aitana Barbero, estudiants de 4t d'ESO a l'Institut Vall de Llémena. Hem realitzat aquest projecte sota la coordinació de la Mònica Molina, motivats per la nostra passió per la investigació i el nostre interès pel tema de la informació que es recull a través d'Internet. Estem molt contents amb el resultat, i pensem que hem obtingut nous coneixements gràcies a aquest. 
+</p>
+</div>
+
+<div id="comHoHemFet">
+<h2>Com ho hem fet??</h2>
+</div>
+<div class="textComHoHemFet">
+<p>
+Lorem ipsum dolor sit amet. Non cupiditate enim et suscipit voluptatem et aspernatur galisum ex facere incidunt ea accusantium minima quo debitis dicta. Qui obcaecati voluptates est laudantium deserunt vel similique saepe. Aut consequatur assumenda et expedita odio sit deleniti eaque quo quis earum At sequi officia. Est soluta corporis et fugiat corporis aut minima voluptas ut debitis omnis ut quam consectetur eum temporibus quia aut voluptas harum.
+
+33 beatae labore sit animi sint sit repudiandae perspiciatis aut velit perferendis! Ea minus sint est omnis voluptate ad enim nulla quo harum saepe nam quae autem ea voluptatibus voluptate aut galisum accusamus! Aut cumque magni aut velit voluptatibus ab alias eius? 
+</p>
+</div>
+</main>
+
+<script>
+
+const $button = document.querySelector(".button");
+const $nav = document.querySelector("#nav");
+
+
+let mediaQueryDetectarCanvi = window.matchMedia('(min-width: 1024px)');
+let mediaQueryDetectarOrdinador = window.matchMedia('(min-width: 1024px)');
+let Ordinador;
+
+	
+	
+	
+	
+	$button.addEventListener("click", (e) => {
+		$button.firstElementChild.classList.toggle("none");
+		$button.lastElementChild.classList.toggle("none");
+		$button.firstElementChild.classList.toggle("si");
+		$button.lastElementChild.classList.toggle("si");
+		$nav.classList.toggle("isActive");
+	});
+	
+	
+	$nav.addEventListener("click", (e) => {
+		$nav.classList.remove("isActive");
+	});
+	
+</script>
+
+</body>
